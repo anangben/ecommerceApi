@@ -9,7 +9,7 @@ await mongoose.connect(process.env.MONGO_URI);
 // Create an express app
 const app = express();
 
-//Use global middlewares
+//Use global middlewares always above the use route
 app.use(express.json());
 // Use route
 app.use(productsRouter);

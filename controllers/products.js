@@ -1,10 +1,10 @@
-import { ProductModel } from "../models/product.js";
 import { addProductValidator } from "../validators/products.js";
 
 export const addProduct = async (req, res, next) => {
   try {
     //Check if user has permission
     // Upload product image
+    console.log(req.file);
     //Validate product information
     const { error, value } = addProductValidator.validate(req.body, {
       abortEarly: false,
